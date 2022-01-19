@@ -1,0 +1,42 @@
+canvas {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 25px solid rgba(0,0,0,0.0);
+	background-color: rgba(25,25,25,0.3);
+}
+
+.scene-nav {
+	font-size: 1.15em;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	background: none;
+	border: 0;
+	right: 0;
+	padding: 1.5em;
+	color: var(--color-nav);
+}
+
+
+
+.scene-nav--prev {
+	left: 0;
+}
+
+.slide-wrapper {
+	display: none;
+}
+
+.icon--arrow-nav-next {
+	transform: rotate(-180deg);
+}
+
+@media screen and (orientation:landscape) {
+	.scene-nav{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+}
