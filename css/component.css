@@ -3,10 +3,31 @@ canvas {
 	position: absolute;
 	left: 0;
 	top: 0;
-	border: 25px solid rgba(0,0,0,0.0);
-	background-color: rgba(25,25,25,0.3);
+	outline-color: white;
+	outline-width: thin;
+	outline-style:outset;
+	outline-offset: -50px;
 }
-
+@media screen and (orientation:landscape) {
+	canvas {
+		padding: 50px;
+		background-image: url("/svg/line.svg"), url("/svg/small line.svg"), url("/svg/dot.svg"), url("/svg/line2.svg"), url("/svg/small-line2.svg"), url("/svg/dot.svg");
+		background-repeat: no-repeat;
+		background-position: left 50% top 10px, left 0px top 50px, left 20px top 30px, right 50% bottom 10px, right 0px bottom 50px, right 20px bottom 30px;
+		background-size: 90% 30px, 38px 30% , auto;
+	  background-origin: padding-box;
+	}
+}
+@media screen and (orientation:portrait) {
+	canvas {
+		padding: 50px;
+		background-image: url("/svg/line.svg"), url("/svg/small line.svg"), url("/svg/line2.svg"), url("/svg/small-line2.svg");
+		background-repeat: no-repeat;
+		background-position: left 50% top 10px, left 0px top 50px, right 50% bottom 10px, right 0px bottom 50px;
+		background-size: 90% 30px, 38px 20%;
+	  background-origin: padding-box;
+	}
+}
 .scene-nav {
 	font-size: 1.15em;
 	position: fixed;
